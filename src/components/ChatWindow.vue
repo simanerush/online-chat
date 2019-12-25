@@ -2,7 +2,7 @@
     <div class="chat-window">
     <div class="chat-messages">
       <div class="scroll-wrapper">
-        <!-- ТУТ ДОЛЖНЫ ВЫВОДИТЬСЯ СООБЩЕНИЯ -->
+        <slot></slot>
       </div>
     </div>
     <div class="chat-send-panel">

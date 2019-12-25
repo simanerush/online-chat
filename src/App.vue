@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import axios from axios
+import axios from 'axios'
 import Container from './components/Container.vue'
 import ChatWindow from './components/ChatWindow.vue'
 import ChatMessage from './components/ChatMessage.vue'
@@ -20,11 +20,16 @@ export default {
       data: []
     }
   },
+  components: {
+   Container,
+   ChatWindow,
+   ChatMessage
+  },
   methods: {
     sendMessage(obj){
         axios.post('http://188.225.47.187/api/chat/sendmessage.php')
-        author: obj.nickname;
-        text: obj.message;
+        author = obj.nickname;
+        text = obj.message;
     },
     getMessages(){
       axios.get('http://188.225.47.187/api/chat/getmessages.php')
@@ -37,7 +42,7 @@ export default {
   },
   mounted(){
     setInterval(()=>{
-       alert(('tick'), 1000);
+       //alert(('tick'), 1000);
     })
   }
 }
