@@ -28,16 +28,16 @@ export default {
     },
     getMessages(){
       axios.get('http://188.225.47.187/api/chat/getmessages.php')
-      .then((response)=>{
-        let response = 
-        console.log('response',response.data)
-        this.data = response.data
+      .then(()=>{
+        let response = [{"id":1, "author":"Admin", "text":"Добро пожаловать"}]
+        console.log('response', response)
+        this.data = response
       })
     }
   },
   mounted(){
-    setInterval(())=>{
-
+    setInterval(()=>{
+       alert(('tick'), 1000);
     })
   }
 }
