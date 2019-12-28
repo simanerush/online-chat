@@ -15,6 +15,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      nickname: '',
+      message: ''
+    }
+  },
+}
+</script>
 <style>
     .chat-window {
         width: 100%;

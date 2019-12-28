@@ -27,9 +27,9 @@ export default {
   },
   methods: {
     sendMessage(obj){
-        axios.post('http://188.225.47.187/api/chat/sendmessage.php')
-        author = obj.nickname;
-        text = obj.message;
+        axios.post('http://188.225.47.187/api/chat/sendmessage.php', {
+        author: obj.nickname,
+        text: obj.message})
     },
     getMessages(){
       axios.get('http://188.225.47.187/api/chat/getmessages.php')
@@ -42,7 +42,7 @@ export default {
   },
   mounted(){
     setInterval(()=>{
-       //alert(('tick'), 1000);
+       //
     })
   }
 }
