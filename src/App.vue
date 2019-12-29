@@ -28,7 +28,7 @@ export default {
   methods: {
     sendMessage(obj){
         axios.post('http://188.225.47.187/api/chat/sendmessage.php', {
-        author: obj.nickname,
+        author: obj.username,
         text: obj.message})
         .then((response)=>{
             this.getMessages();
