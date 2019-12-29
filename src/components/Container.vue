@@ -4,6 +4,12 @@
     </div>
 </template>
 
+<script>
+export default {
+    name: 'Container',
+    props: ['']
+}
+</script>
 <style>
     .container {
         width: 764px;

@@ -2,7 +2,7 @@
   <div id="app">
     <Container>
       <ChatWindow @send-message="sendMessage">
-        <ChatMessage v-for="message in data" :key = "message.author" username="Ivan" time="21.12.2019 05:00:50">{{message.text}}</ChatMessage>
+        <ChatMessage v-for="message in data" :key = "message.id" username="message.author" time="message.datetime">{{message.text}}</ChatMessage>
       </ChatWindow>
     </Container>
   </div>
@@ -30,6 +30,9 @@ export default {
         axios.post('http://188.225.47.187/api/chat/sendmessage.php', {
         author: obj.nickname,
         text: obj.message})
+        .then(() => {
+            this.getMessages();
+        })
     },
     getMessages(){
       axios.get('http://188.225.47.187/api/chat/getmessages.php')
@@ -41,9 +44,8 @@ export default {
     }
   },
   mounted(){
-    setInterval(()=>{
-       //
-    })
+    this.getMessages();
+
   }
 }
 

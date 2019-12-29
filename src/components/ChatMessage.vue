@@ -1,7 +1,6 @@
  <template>
  <div class="chat-message">
     <div class="info">{{ username }} {{ datetime }}</div>
-    Hello, World!!!
     <slot></slot>
     </div>
 </template>
@@ -26,6 +25,7 @@
 </style>
 <script>
 export default {
+    name: 'ChatMessage',
     props: ['username', 'datetime']
 }
 </script>
