@@ -8,7 +8,7 @@
     <div class="chat-send-panel">
       <input v-model="nickname" type="text" placeholder="Ваш никнейм..." class="chat-send-name-field" />
       <input v-model="message" type="text" placeholder="Сообщение..." class="chat-send-message-field"/>
-      <button @click="$emit('send-message', { username: nickname, message: msg })">
+      <button @click="$emit('send-message', { username: nickname, message: message })">
         <img src="/img/send.png" />
       </button>
     </div>
