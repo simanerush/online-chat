@@ -40,7 +40,7 @@ export default {
       axios.get('http://188.225.47.187/api/chat/getmessages.php')
       .then((response) =>{
         console.log('response', response)
-        this.data = response
+        this.data = response.data
       })
     }
   },
